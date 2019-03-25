@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+long long int A[200001] = {0};
+long long int sum[300000] = {0};
+
+int main(){
+
+  string s;
+
+  cin >>s;
+
+  while(s[0] != '.'){
+    string ans = "yes";
+
+    stack<char> ST;
+    for(int i = 0; i < (int)s.size(); i++){
+      if(s[i] == '(' or s[i] == '[')ST.push(s[i]);
+      else if(s[i] == ')'){
+        if(ST.top() == '(')ST.pop();
+        else ans = "no";
+      }else if(s[i] == ']'){
+        if(ST.top() == '[')ST.pop();
+        else ans = "no";
+      }
+    }
+    if(!(ST.empty()))ans = "no";
+
+    cout <<ans<<endl;
+    cin >>s;
+  }
+  return 0;
+}
