@@ -1,19 +1,12 @@
 #include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 int main(){
+  int A,B,C;
 
-  int A,B;
-  string ans = "Yes";
-  cin >>A>>B;
+  cin >>A>>B>>C;
 
-  for(int i = 1;i<=3;i++){
-    if((A*B*i)%2 == 0){
-      ans = "No";
-    }
-
-  }
-
-  cout <<ans<<endl;
+  cout <<(B/A > C ? C:B/A)<<endl;
   return 0;
-}
+  }
