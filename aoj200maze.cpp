@@ -1,0 +1,69 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long int ll;
+#define MAXSIZE 10000000;
+
+bool comp(const pair<string,int> a, const pair<string,int> b) {
+  if (a.first != b.first)
+    return a.first < b.first; // 高い順に並べたいので演算子を逆に
+  else{
+      return a.second > b.second;
+  }
+}
+
+int Dx[6] = { 0, 0, 1, 1,-1,-1};
+int Dy[6] = { 1,-1, 1, 0, 0,-1};
+
+//priority_queue<long long int,vector<long long int>, greater<long long int>> PQ;
+//priority_queue<long long int> PQ1;
+int main(){
+
+   int N;
+   vector<pair<long long  int ,long long  int > >list;
+   long long int ans = 1000;
+
+   cin >>N;
+
+   for(int i = 0;i<N;i++){
+     long long int x,y;
+     cin >>x>>y;
+     list.push_back(make_pair(x,y));
+   }
+
+   sort(list.begin(), list.end());
+
+   for(int i = 0;i<N;i++){
+     for(int j = 0;j < N;j++){
+
+     }
+   }
+    return 0;
+}
+
+/*Syakutori
+while(cin >>b && b)){
+      ll t = 1;
+      long long int ansS = 1,ansT=0;
+      long long int sum = 0;
+
+      for(ll s = 1;s < 50000000;s++){
+
+        while(t <  50000000 && sum+Rsum[t] < b){
+          sum += Rsum[t];
+          t++;
+        }
+        if(b == sum+Rsum[t]){
+          if(ansT - ansS < t-s){
+            ansS = s;
+            ansT = t;
+          }
+          cout <<ansS<<" "<<ansT-ansS + 1<<endl;
+          break;
+        }
+        if(t == s)++t;
+        else sum -= Rsum[s];
+        }
+    }
+
+*/

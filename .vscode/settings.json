@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "xstddef": "cpp",
+        "ostream": "cpp",
+        "list": "cpp",
+        "cstdlib": "cpp",
+        "utility": "cpp",
+        "iostream": "cpp"
+    },
+    "python.linting.pylintEnabled": true
+}
